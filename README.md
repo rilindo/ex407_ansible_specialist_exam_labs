@@ -16,6 +16,16 @@ The exam objectives clearly stated that you will be using ansible 2.3. This mean
 
 `include_tasks` does not exists in 2.3. Use `include` statement instead
 
+## Tags
+
+If you need to apply a tag to an entire role, you may need to do this instead:
+
+```
+roles:
+  - { role: webserver, port: 5000, tags: [ 'web', 'foo' ] }
+```
+
+[See here for more tag info in 2.3](https://docs.ansible.com/ansible/2.3/playbooks_tags.html)
 ## vault-id
 
 vault-id is not available as a parameter to use. For now, rely on --ask-vault-pass instead.
