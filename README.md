@@ -30,7 +30,30 @@ roles:
 
 vault-id is not available as a parameter to use. For now, rely on --ask-vault-pass instead.
 
+## Certificate Errors
+
+Given that 2.3 has fairly outdated certificates, you may get similar to the following  when installing through ansible galaxy:
+
+```
+rocinante:ex407_ansible_specialist_practice_tasks rilindo$ ansible-galaxy install https://github.com/monzell/ansible-lighttpd/archive/v0.1.tar.gz validate_certs=False
+- downloading role from https://github.com/monzell/ansible-lighttpd/archive/v0.1.tar.gz
+ [ERROR]: failed to download the file: Failed to validate the SSL certificate for github.com:443. Make sure your managed
+systems have a valid CA certificate installed. You can use validate_certs=False if you do not need to confirm the servers
+identity but this is unsafe and not recommended. Paths checked for this platform: /etc/ssl/certs, /etc/ansible,
+/usr/local/etc/openssl. The exception msg was: ("bad handshake: Error([('SSL routines', 'SSL3_READ_BYTES', 'tlsv1 alert
+protocol version')],)",).
+```
+
+Use the -c parameter to ignore the errors (in real life, you should really upgrade Ansible)
+
+```
+rocinante:ex407_ansible_specialist_practice_tasks rilindo$ ansible-galaxy install https://github.com/monzell/ansible-lighttpd/archive/v0.1.tar.gz -c
+- downloading role from https://github.com/monzell/ansible-lighttpd/archive/v0.1.tar.gz
+- extracting v0.1 to /etc/ansible/roles/v0.1
+```
 # Tips
+
+## Documentation
 
 Most of the documentation can be looked up with `ansible-doc -l`. Since it takes a very long time to pull up, you can pipe the list of modules to file before writing any code. This will save time, as you only need to page through or grep in a text file instead of waiting until `ansible-doc -l` loads.  For example, if you need to look up a mysql_user module, you can do this:
 
@@ -41,3 +64,13 @@ mysql_user                         Adds or removes a user from a MySQL database.
 proxysql_mysql_users               Adds or removes mysql users from proxysql admin interface.                                      
 stardust:~ rilindo$ ansible-doc mysql_user
 ```
+
+## Installing Roles
+
+You can install from a tarball directly. Here is an example:
+
+```
+ansible-galaxy install https://github.com/monzell/ansible-lighttpd/archive/v0.1.tar.gz
+```
+
+Currently, ansible-galaxy does *not* install from zip archives.
