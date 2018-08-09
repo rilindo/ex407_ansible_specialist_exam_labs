@@ -63,3 +63,7 @@
    - Install mysql client and server.
    - executed with tag `database`
    - Deployed to hosts in group `uns`
+
+12. Install lighttpd using the role located at https://github.com/monzell/ansible-lighttpd/archive/v0.1.tar.gz
+
+13. Install CA certs from https://www.geotrust.com/resources/root-certificates/ into /etc/pki/ca-trust/source/anchors/ and run update-ca-trust.
