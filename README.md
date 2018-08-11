@@ -74,3 +74,20 @@ ansible-galaxy install https://github.com/monzell/ansible-lighttpd/archive/v0.1.
 ```
 
 Currently, ansible-galaxy does *not* install from zip archives.
+
+## Verifying variables
+
+You can print out variables in `name`. This can be useful to verify that you are setting the right variables:
+
+```
+- hosts: all
+  vars:
+    filename: hellworld.txt
+  tasks:
+    - name: "We are copying file {{ filename }} to the instance"
+      copy:
+        src: "{{ filename }}"
+        dest: "/tmp/{{ filename }}"
+```
+
+Note that this would probably not work for loop variables `item` as well as ansible facts.
