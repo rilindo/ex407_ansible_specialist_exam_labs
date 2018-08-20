@@ -69,9 +69,9 @@
 13. Install CA certs from https://www.geotrust.com/resources/root-certificates/ into /etc/pki/ca-trust/source/anchors/ and run update-ca-trust.
 
 14. Write  play for each of the following modules:
-   - Ping
-   - Setup
-   - Yum
+   - ping
+   - setup
+   - yum
    - service
    - user
    - copy
