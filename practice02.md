@@ -7,3 +7,4 @@ Note: wrap commands in bash
 5. Create a file in /var/www/html/shipclass.html using variables in the encrypted file.
 6. Set default ansible forks to 20.
 7. Set default ansible timeout to 120 seconds.
+8. Install MariaDB server with the password of `m4rzN4vy`
