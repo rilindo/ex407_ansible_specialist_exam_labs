@@ -9,3 +9,4 @@ Note: wrap commands in bash
 7. Set default ansible timeout to 120 seconds.
 8. Install MariaDB server with the password of `m4rzN4vy` and drop anonymous tables.
 9. Add `tony`, `steve`, and `nat` as users and make sure that tony can sudo as root.
+10. Install torquebox using the following URL: https://github.com/juggy/torquebox-ansible/archive/master.zip
