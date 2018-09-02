@@ -8,3 +8,4 @@ Note: wrap commands in bash
 6. Set default ansible forks to 20.
 7. Set default ansible timeout to 120 seconds.
 8. Install MariaDB server with the password of `m4rzN4vy` and drop anonymous tables.
+9. Add `tony`, `steve`, and `nat` as users and make sure that tony can sudo as root.
