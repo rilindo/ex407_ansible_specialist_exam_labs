@@ -2,11 +2,20 @@ Note: wrap commands in bash
 
 1. Run an ansible add-hoc command to install elinks
 2. Create a file "/tmp/hosts.txt" with the OS, IP and Hostname.
-3. Run an ansible add-hoc command to install httpd
-4. Create an encrypted file "secure" with variable "shipclass" set to "truman"
-5. Create a file in /var/www/html/shipclass.html using variables in the encrypted file.
-6. Set default ansible forks to 20.
-7. Set default ansible timeout to 120 seconds.
-8. Install MariaDB server with the password of `m4rzN4vy` and drop anonymous tables.
-9. Add `tony`, `steve`, and `nat` as users and make sure that tony can sudo as root.
-10. Install torquebox using the following URL: https://github.com/juggy/torquebox-ansible/archive/master.zip
+3. Create a playbook to:
+  - Add `donnager.example.com` to /etc/hosts set to the ip of the host
+    - Executed with tag `updated webhost`
+  - Install apache and ensure:
+    - It is running
+    - It will start on boot
+    - Set host to `donnager.example.com`
+    - Executed when you run tag `webserver`
+    - Create a site:
+      - Added an index.html in /var/www/html with the follow text
+         - Welcome to the Martian Marine Web Site
+      - Password protect page with the following username and password
+         - bobbie - cucUmb3rS4nwitch
+   - Applied to hosts in group `web`
+   - Password to protect info will be `3arthSucks`
+4. Set default ansible forks to 20.
+5. Set default ansible timeout to 120 seconds.
