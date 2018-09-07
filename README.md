@@ -32,7 +32,7 @@ vault-id is not available as a parameter to use. For now, rely on --ask-vault-pa
 
 ## Certificate Errors
 
-Given that 2.3 has fairly outdated certificates, you may get similar to the following  when installing through ansible galaxy:
+Given that 2.3 has fairly outdated certificates, you may get an error similar to the following  when installing through ansible galaxy:
 
 ```
 rocinante:ex407_ansible_specialist_practice_tasks rilindo$ ansible-galaxy install https://github.com/monzell/ansible-lighttpd/archive/v0.1.tar.gz validate_certs=False
