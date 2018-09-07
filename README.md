@@ -319,6 +319,11 @@ Complete!
 /usr/share/doc/ansible-doc-2.4.2.0/rst/tower.rst
 /usr/share/doc/ansible-doc-2.4.2.0/rst/vault.rst
 ```
+
+For jinja2 documentation, you can also look it up locally with elinks:
+```
+elinks file:///usr/share/doc/python-jinja2-2.7.2/html/templates.html
+```
 ## Installing Roles
 
 You can install from a tarball directly. Here is an example:
