@@ -1,9 +1,11 @@
-# ex407_ansible_specialist_practice_tasks
-A repo that contains practice tasks for use in practicing for the Red Hat ex407 exam. Feel free to contribute. No content from the exam will be accepted, though.
+# Red Hat EX407 Ansible Specialist Exam Labs
+A repo that contains labs for use in practicing for the Red Hat ex407 exam. Feel free to contribute. No content from the exam will be accepted, though.
 
 # Instructions
 
-Each practice file is a session. You should complete everything in each session in just about under an hour (ideally, around 30 minutes). Since the exam is 4 hours, these sessions should give you enough practice to finish all the tasks in the exam while still have time to review and refine.
+You should complete everything in each lab in just about under an hour (ideally, around 30 minutes). Since the exam is 4 hours, these sessions should give you enough practice to finish all the tasks in the exam while still have time to review and refine.
+
+## Lab Environment 
 
 You should have at least 2 servers to work with - your control station (where you run your ansible commands from) and remote server. I recommend you should at least have 4 instances to work with and then you can setup your inventory as follows (ips are not real, of course):
 
@@ -23,17 +25,30 @@ You should have at least 2 servers to work with - your control station (where yo
 
 You should have another one for running Ansible Tower as well.
 
-If you want to practice using a cloud provider, there are many that you can use that are inexpensive, such as Digital Ocean. Feel free to use [this link](https://m.do.co/c/75f7a0300020) to sign up for an account (as well as support this effort by giving me free credits. :) )
+The OS should be running Red Hat 7.3 or whatever is stated in the exam (an equivilent version for CentOS should be acceptable)
+
+NOTE: If you want to practice using a cloud provider, there are many that you can use that are inexpensive, such as Digital Ocean. Feel free to use [this link](https://m.do.co/c/75f7a0300020) to sign up for an account (as well as support this effort by giving me free credits. :) )
+
+Finally, while it is not stated what editor you be using, I suggest using vim when writing your playbooks. You can use other editors, but if they are not available during the exam, you may have a bad time
  
 # Exam Objectives
 
-The objectives for the Ex 407 exam can be found here:
+The objectives for the EX 407 exam can be found here:
 
 [Red Hat Certified Specialist in Ansible Automation exam](https://www.redhat.com/en/services/training/ex407-red-hat-certified-specialist-in-ansible-automation-exam)
 
 # Ansible Exam notes
 
 The exam objectives clearly stated that you will be using ansible 2.3. This means some commands in 2.4 and above will not be available in 2.3. Here they are:
+
+# Training
+
+Official training is provided by Red Hat:
+
+[Automation with Ansible I](https://www.redhat.com/en/services/training/do407-automation-ansible-i)
+
+Inexpensive training can also be found at Linux Academy
+[Red Hat Certified Specialist in Ansible Automation (EX407) Preparation Course](https://linuxacademy.com/linux/training/course/name/linux-academy-red-hat-certified-specialist-in-ansible-automation)
 
 ## include_tasks
 
@@ -373,3 +388,4 @@ You can print out variables in `name`. This can be useful to verify that you are
 ```
 
 Note that this would probably not work for loop variables `item` as well as ansible facts.
+
