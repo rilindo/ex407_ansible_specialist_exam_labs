@@ -37,10 +37,6 @@ The objectives for the EX 407 exam can be found here:
 
 [Red Hat Certified Specialist in Ansible Automation exam](https://www.redhat.com/en/services/training/ex407-red-hat-certified-specialist-in-ansible-automation-exam)
 
-# Ansible Exam notes
-
-The exam objectives clearly stated that you will be using ansible 2.3. This means some commands in 2.4 and above will not be available in 2.3. Here they are:
-
 # Training
 
 Official training is provided by Red Hat:
@@ -49,6 +45,10 @@ Official training is provided by Red Hat:
 
 Inexpensive training can also be found at Linux Academy:
 * [Red Hat Certified Specialist in Ansible Automation (EX407) Preparation Course](https://linuxacademy.com/linux/training/course/name/linux-academy-red-hat-certified-specialist-in-ansible-automation)
+
+# Possible Issues When Taking The Exam
+
+The exam objectives clearly stated that you will be using ansible 2.3. Be prepared to not be able to use commands that are available in the current ansible release. Here are some gotchas and solutions:
 
 ## include_tasks
 
