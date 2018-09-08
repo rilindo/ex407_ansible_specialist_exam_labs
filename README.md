@@ -45,10 +45,10 @@ The exam objectives clearly stated that you will be using ansible 2.3. This mean
 
 Official training is provided by Red Hat:
 
-[Automation with Ansible I](https://www.redhat.com/en/services/training/do407-automation-ansible-i)
+* [Automation with Ansible I](https://www.redhat.com/en/services/training/do407-automation-ansible-i)
 
-Inexpensive training can also be found at Linux Academy
-[Red Hat Certified Specialist in Ansible Automation (EX407) Preparation Course](https://linuxacademy.com/linux/training/course/name/linux-academy-red-hat-certified-specialist-in-ansible-automation)
+Inexpensive training can also be found at Linux Academy:
+* [Red Hat Certified Specialist in Ansible Automation (EX407) Preparation Course](https://linuxacademy.com/linux/training/course/name/linux-academy-red-hat-certified-specialist-in-ansible-automation)
 
 ## include_tasks
 
