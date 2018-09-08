@@ -1,10 +1,33 @@
 # ex407_ansible_specialist_practice_tasks
 A repo that contains practice tasks for use in practicing for the Red Hat ex407 exam. Feel free to contribute. No content from the exam will be accepted, though.
 
+# Instructions
+
+Each practice file is a session. You should complete everything in each session in just about under an hour (ideally, around 30 minutes). Since the exam is 4 hours, these sessions should give you enough practice to finish all the tasks in the exam while still have time to review and refine.
+
+You should have at least 2 servers to work with - your control station (where you run your ansible commands from) and remote server. I recommend you should at least have 4 instances to work with and then you can setup your inventory as follows (ips are not real, of course):
+
+```
+[database]
+10.20.30.40
+
+[web]
+10.40.80.120
+
+[bastion]
+10.60.120.180
+
+[app]
+10.100.200.10
+```
+
+You should have another one for running Ansible Tower as well.
+
+If you want to practice using a cloud provider, there are many that you can use that are inexpensive, such as Digital Ocean. Feel free to use [this link](https://m.do.co/c/75f7a0300020) to sign up for an account (as well as support this effort by giving me free credits. :) )
+ 
 # Exam Objectives
 
 The objectives for the Ex 407 exam can be found here:
-
 
 [Red Hat Certified Specialist in Ansible Automation exam](https://www.redhat.com/en/services/training/ex407-red-hat-certified-specialist-in-ansible-automation-exam)
 
