@@ -1,0 +1,13 @@
+Write  play for each of the following modules:
+   - ping
+   - setup
+   - yum
+   - service
+   - user
+   - copy
+   - file
+   - git
+   - lineinfile
+   - htpasswd
+   - script
+   - debug
