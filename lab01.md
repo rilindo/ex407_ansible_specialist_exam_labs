@@ -3,6 +3,13 @@
   - mount volue volumes under /home/users
   - Executed using the tag `volumes`
 
+Note that if you are working with system that does not have a block device to work with, you can create one with a disk image and a loopback:
+
+```
+fallocate -l 1G /opt/disk01.img
+losetup /dev/loop1 /opt/disk01.img
+```
+
 2.  Create a playbook to create:
   - Create in /home/sol
   - Usernames and passwords will be will be:
