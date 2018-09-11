@@ -43,3 +43,10 @@ losetup /dev/loop1 /opt/disk01.img
    - Enable for startup
    - Configure workgroup as `truman`
    - tagged `smb`
+
+7. Install via the following via ad-hoc
+   - elinks on `web` and `app` server groups
+   - ftp and smbclient on database groups
+
+Be sure to wrapp ad-hoc command within the shell script
+   
