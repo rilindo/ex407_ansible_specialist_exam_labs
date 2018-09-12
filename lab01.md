@@ -30,19 +30,22 @@ losetup /dev/loop1 /opt/disk01.img
    - Enable postfix on startup
    - Launch postfix
    - tagged `mail`
-4. Create playbook on `app` group to:
+4. Create role on `app` group to:
    - Install squid
    - Configure squid to block facebook.
    - tagged `filter`
-5. Create playbook on `database` group to:
+   - Restart squid
+5. Create role on `database` group to:
    - Install vsftp
    - Enable anonymous
    - tagged `ftp`
-6. Create playbook on `database` group to:
+   - restart vsftp
+6. Create role on `database` group to:
    - Install samba
    - Enable for startup
    - Configure workgroup as `truman`
    - tagged `smb`
+   - restart samba
 
 7. Install via the following via ad-hoc
    - elinks on `web` and `app` server groups
