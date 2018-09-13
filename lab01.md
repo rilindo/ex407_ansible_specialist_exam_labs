@@ -12,7 +12,7 @@ fallocate -l 1G /opt/disk01.img
 losetup /dev/loop1 /opt/disk01.img
 ```
 
-2.  Create a playbook on `web` to create:
+2.  Create a playbook on `bastion` to create:
   - Create in /home/sol
   - Usernames and passwords will be will be:
      - `alex` - `L4sagna`
@@ -24,32 +24,42 @@ losetup /dev/loop1 /opt/disk01.img
   - The users will be created with tag `users`
   - Applied to hosts in group `bastion`
   - Password to protect the users will be `prot0mo|eculE`
-  - tagged `web` 
+
 3. Create playbook on all hosts to:
    - Install postfix
    - Enable postfix on startup
    - Launch postfix
-   - tagged `mail`
-4. Create role on `app` group to:
+
+4. Create role on to:
    - Install squid
    - Configure squid to block facebook.
-   - tagged `filter`
    - Restart squid
-5. Create role on `database` group to:
+
+5. Create role on to:
    - Install vsftp
    - Enable anonymous
-   - tagged `ftp`
    - restart vsftp
-6. Create role on `database` group to:
+
+6. Create role on group to:
    - Install samba
    - Enable for startup
    - Configure workgroup as `truman`
-   - tagged `smb`
    - restart samba
 
 7. Install via the following via ad-hoc
    - elinks on `web` and `app` server groups
    - ftp and smbclient on database groups
-
 Be sure to wrapp ad-hoc command within the shell script
-   
+
+8. Consolidate 2, 4, 5, and 6 into one playbook with the following:
+   - web should be tagged `bastion`
+   - squid role be tagged `filter`
+   - vsftp role should be tagged `ftp_server`
+   - smb role should be tagged `file_sharing`
+
+The play should run against all hosts, but each role should only run as follows:
+
+   - web - bastion group
+   - squid - app group
+   - vsftp - database group
+   - smb - web group
