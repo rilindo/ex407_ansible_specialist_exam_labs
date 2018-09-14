@@ -36,9 +36,9 @@ losetup /dev/loop1 /opt/disk01.img
    - Restart squid
 
 5. Create role on to:
-   - Install vsftp
-   - Enable anonymous
-   - restart vsftp
+   - Install vsftpd
+   - disable anonymous ftp
+   - restart vsftpd
 
 6. Create role on group to:
    - Install samba

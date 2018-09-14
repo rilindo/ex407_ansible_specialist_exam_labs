@@ -389,3 +389,15 @@ You can print out variables in `name`. This can be useful to verify that you are
 
 Note that this would probably not work for loop variables `item` as well as ansible facts.
 
+## ansible configuration location
+
+Remember, ansible will read configuration variables in the following locations:
+
+- in ANSIBLE_CONFIG variable
+- in the current working directory 
+- in .ansible.cfg in
+- in /etc/ansible/ansible.cfg
+
+To practice your ansible configuration, you can simply drop the config in the current working folder or home directory, rather than modifying the existing ansible.cfg in /etc/ansible. You can download the current config from the following location:
+
+https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg
