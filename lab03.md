@@ -19,3 +19,7 @@
 6. Consolidate 2-4 into a single play
   - Give it the ability to run each playbook using tags
   - Run it against all hosts
+
+7. Create a playbook too
+  - get the output of `ps aux`
+  - save the output into `/tmp/process_snapshot.txt`

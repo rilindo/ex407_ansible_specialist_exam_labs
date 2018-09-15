@@ -40,3 +40,7 @@ And the default site:
 6. Write a playbook to:
   - apply all security updates
   - reboot all instances and monitor until they come back up
+
+7. Write a playbook to:
+  - get the output of `rpm -qa`
+  - save the output to `/tmp/package-report.txt`
