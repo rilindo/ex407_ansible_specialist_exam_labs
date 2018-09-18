@@ -23,3 +23,4 @@
 7. Create a playbook too
   - get the output of `ps aux`
   - save the output into `/tmp/process_snapshot.txt`
+  - run it against all hosts
