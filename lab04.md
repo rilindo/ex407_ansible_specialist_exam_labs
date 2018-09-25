@@ -17,7 +17,7 @@
    - each role should be tagged
    - It should with all hosts in inventory
 
-6. Write  play for each of the following modules:
+6. Write a  play for each of the following modules:
    - ping
    - setup
    - yum
