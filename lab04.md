@@ -3,8 +3,7 @@
    - Export /home/users
    - Deployed to hosts in group `bastion`
 2. Create playbook to:
-   - Install mysql client and server.
-   - executed with tag `database`
+   - Install mysql client and maria server and start it up.
    - Deployed to hosts in group `database`
 
 3. Install lighttpd
