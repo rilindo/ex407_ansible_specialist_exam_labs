@@ -2,6 +2,7 @@ Note: wrap ad-hoc commands in bash
 
 1. Run an ansible add-hoc command to install elinks
 2. Create a file "/tmp/hosts.txt" with the OS, IP and Hostname.
+   - put it on all hosts
 3. Create a playbook to:
   - Add `donnager.example.com` to /etc/hosts set to the ip of the host
   - Install httpd and ensure:
@@ -44,3 +45,4 @@ And the default site:
 7. Write a playbook to:
   - get the output of `rpm -qa`
   - save the output to `/tmp/package-report.txt`
+  - put it on all hosts

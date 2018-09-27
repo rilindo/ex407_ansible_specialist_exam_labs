@@ -11,6 +11,7 @@
    - Install on `web` group
 
 4. Install CA certs from https://www.geotrust.com/resources/root-certificates/ into /etc/pki/ca-trust/source/anchors/ and run update-ca-trust.
+   - install on `web` group
 
 5. Consolidate 1-4 into a single play
    - each role should be tagged
